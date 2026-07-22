@@ -1,0 +1,17 @@
+# Build artifacts (make build)
+bin/
+*.exe
+*.test
+
+# Coverage reports (make coverage)
+coverage.out
+coverage.html
+
+# Environment
+.env
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
