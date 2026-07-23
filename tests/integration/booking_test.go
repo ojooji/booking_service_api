@@ -15,15 +15,15 @@ import (
 
 	"github.com/go-chi/chi/v5"
 	"github.com/jackc/pgx/v5/pgxpool"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
-	"github.com/testcontainers/testcontainers-go"
-	"github.com/testcontainers/testcontainers-go/wait"
 	"github.com/ojooji/booking-service-api/internal/config"
 	"github.com/ojooji/booking-service-api/internal/handler"
 	pgxrepo "github.com/ojooji/booking-service-api/internal/repository/pgx"
 	"github.com/ojooji/booking-service-api/internal/router"
 	"github.com/ojooji/booking-service-api/internal/service"
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
+	"github.com/testcontainers/testcontainers-go"
+	"github.com/testcontainers/testcontainers-go/wait"
 )
 
 func startPostgres(ctx context.Context) (testcontainers.Container, string, error) {

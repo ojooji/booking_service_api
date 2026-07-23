@@ -9,11 +9,11 @@ import (
 )
 
 var (
-	ErrEmptyEmail    = errors.New("email is required")
-	ErrEmptyPassword = errors.New("password is required")
-	ErrShortPassword = errors.New("password must be at least 8 characters")
-	ErrEmptyName     = errors.New("first and last name are required")
-	ErrInvalidPrice  = errors.New("price must be non-negative")
+	ErrEmptyEmail      = errors.New("email is required")
+	ErrEmptyPassword   = errors.New("password is required")
+	ErrShortPassword   = errors.New("password must be at least 8 characters")
+	ErrEmptyName       = errors.New("first and last name are required")
+	ErrInvalidPrice    = errors.New("price must be non-negative")
 	ErrInvalidDuration = errors.New("duration must be positive")
 )
 

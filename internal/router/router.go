@@ -3,10 +3,10 @@ package router
 import (
 	"github.com/go-chi/chi/v5"
 	chimw "github.com/go-chi/chi/v5/middleware"
-	httpSwagger "github.com/swaggo/http-swagger"
 	"github.com/ojooji/booking-service-api/internal/config"
 	"github.com/ojooji/booking-service-api/internal/handler"
 	"github.com/ojooji/booking-service-api/internal/middleware"
+	httpSwagger "github.com/swaggo/http-swagger"
 )
 
 func New(cfg *config.Config, authH *handler.AuthHandler, userH *handler.UserHandler, svcH *handler.ServiceHandler, empH *handler.EmployeeHandler, bookingH *handler.BookingHandler) *chi.Mux {

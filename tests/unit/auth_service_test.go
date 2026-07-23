@@ -5,13 +5,13 @@ import (
 	"testing"
 
 	"github.com/google/uuid"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/mock"
 	"github.com/ojooji/booking-service-api/internal/config"
 	"github.com/ojooji/booking-service-api/internal/domain"
 	"github.com/ojooji/booking-service-api/internal/repository"
 	"github.com/ojooji/booking-service-api/internal/service"
 	"github.com/ojooji/booking-service-api/pkg/hash"
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/mock"
 )
 
 type mockUserRepo struct {

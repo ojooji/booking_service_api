@@ -6,11 +6,11 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/mock"
 	"github.com/ojooji/booking-service-api/internal/domain"
 	"github.com/ojooji/booking-service-api/internal/repository"
 	"github.com/ojooji/booking-service-api/internal/service"
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/mock"
 )
 
 type mockBookingRepo struct {
@@ -203,7 +203,7 @@ func TestBookingCreate_StartTimeValidation(t *testing.T) {
 	}{
 		{"past", nextBusinessSlot().Add(-48 * time.Hour), service.ErrPastStartTime},
 		{"unaligned", nextBusinessSlot().Add(7 * time.Minute), service.ErrUnalignedStartTime},
-		{"before opening", nextBusinessSlot().Add(-7 * time.Hour), service.ErrOutsideHours}, // 03:00
+		{"before opening", nextBusinessSlot().Add(-7 * time.Hour), service.ErrOutsideHours},                  // 03:00
 		{"runs past closing", nextBusinessSlot().Add(7*time.Hour + 30*time.Minute), service.ErrOutsideHours}, // 17:30 + 60min
 	}
 
