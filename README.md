@@ -49,14 +49,3 @@ Responses use a consistent envelope: `{"status": "success", "data": ...}` / `{"s
 go test ./tests/unit/...        # fast, mocked repositories
 go test ./tests/integration/... # spins up Postgres via testcontainers (needs Docker)
 ```
-
-## Known limitations (honest list)
-
-- Single JWT per login — no refresh flow, and logout is client-side only (tokens are valid until expiry, there is no revocation)
-- Business hours (09:00–18:00) are validated in the client's timezone offset, not the employee's — fine for a single-timezone deployment, wrong for a global one
-- No rate limiting on auth endpoints
-- No pagination on list endpoints
-- No admin bootstrap — the first admin has to be promoted via SQL
-- Error responses on 500s echo internal error text; should be replaced with generic messages + server-side logging
-
-These are documented on purpose — I'd rather show I know where the edges are.
